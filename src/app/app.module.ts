@@ -1,21 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { DragulaModule } from 'ng2-dragula';
 import { AppComponent } from './app.component';
-import { WishlistComponent } from './components/wishlist/wishlist.component';
+
+
+import { NgDragDropModule } from 'ng-drag-drop';
 
 import { DataService } from './services/data.service';
-import { MylistComponent } from './components/mylist/mylist.component';
+
+
+import { DragndropComponent } from './components/dragndrop/dragndrop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WishlistComponent,
-    MylistComponent
+    DragndropComponent
   ],
   imports: [
     BrowserModule,
-    DragulaModule
+    NgDragDropModule.forRoot()
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
