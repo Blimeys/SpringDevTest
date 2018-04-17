@@ -1,0 +1,14 @@
+<div *ngFor="let item of myList" [dragula]='"bag-three"' [dragulaModel]="items.beach">
+  <p>
+    {{item}} <button (click)="deleteItem(item)">remove</button>
+  </p>
+</div>
+
+<ul *ngFor="let list of items.beach" [dragula]='"bag-one"' [dragulaModel]='items.beach'>
+    <li>
+      {{list}} <button (click)="addToWishList(list)">add</button>
+    </li>
+</ul>
+<div [dragula]='"bag-one"' [dragulaModel]='myList' style="width:200px; height:300px; border-style:solid;">
+  <p>Drop items here</p>
+</div>
